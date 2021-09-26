@@ -1,29 +1,30 @@
 package com.example.helloworld
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
+    lateinit var myButton: Button
+    lateinit var myText: TextView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        println(" Hello there ")
-        var num1 = 7
-        var num2 = 10
-        if( num1 > num2){
-            Log.d("MainActivity","$num1 is greater than $num2")
-        } else {
-            Log.d("MainActivity","$num2 is greater than $num1")
-        }
+         myText = findViewById(R.id.tvGender)
+         myButton = findViewById(R.id.Submit)
 
-        calculation(num1, num2)
-    }
-
-    fun calculation( num: Int,  num2: Int ){
-        var ans = num + num2
-        Log.d("MainActivity", "$ans")
+        myButton.setOnClickListener {(changeColor())}
 
     }
+
+    fun changeColor (){
+        myButton.setBackgroundColor(Color.RED)
+    }
+
 }

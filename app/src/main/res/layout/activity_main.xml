@@ -21,24 +21,30 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:autoText="false"
+            android:background="#989595"
+            android:padding="15dp"
             android:text="Sign up page:"
             android:textSize="24sp" />
+
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" >
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
         <TextView
-            android:id="@+id/textView9"
+            android:id="@+id/tvName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Your Name:" />
+            android:padding="10dp"
+            android:text="Enter Your Name:"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -51,10 +57,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView10"
+            android:id="@+id/tvPass"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Your Password:" />
+            android:padding="10dp"
+            android:text="Enter Your Password:"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -68,10 +76,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
+            android:id="@+id/tvEmail"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter Your Email:" />
+            android:padding="10dp"
+            android:text="Enter Your Email:"
+            android:textSize="20sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
@@ -86,12 +96,74 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:backgroundTint="#4CAF50"
+        android:text="Submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="415dp"
+        android:layout_height="102dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <TextView
+            android:id="@+id/tvGender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Gender:"
+            android:textSize="20sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/radioButton"
+                android:layout_width="78dp"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDisclaimer"
+        android:layout_width="408dp"
+        android:layout_height="43dp"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="I agree to terms and conditions."
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="402dp"
+        android:layout_height="36dp"
+        android:text="I agree"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDisclaimer"
+        app:layout_constraintVertical_bias="0.125" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
